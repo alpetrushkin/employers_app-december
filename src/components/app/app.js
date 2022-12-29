@@ -28,13 +28,7 @@ class App extends Component {
    }
 
    addItem = (name, salary) => {
-      const newItem = {
-         name,
-         salary,
-         increase: true,
-         rise: false,
-         id: v1()
-      }
+      const newItem = {name, salary, increase: true, rise: false, id: v1()}
       this.setState(({data}) => {
          const newArr = [...data, newItem];
          return {
